@@ -55,7 +55,19 @@ function displayWeather(response) {
 
 }
 
-let apiKey = "93fe0a104f408de6497bde5628168f6f";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Prilep&appid=${apiKey}&units=metric`;
+function searchCity(city) {
+  let apiKey = "93fe0a104f408de6497bde5628168f6f";
+  let units = "metric";
+  let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather"
+  let apiUrl = `${apiEndPoint}?q=${city}&appid=${apiKey}&units=${units}`;
 
-axios.get(apiUrl).then(displayWeather);
+  axios.get(apiUrl).then(displayWeather);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#search-input").value;
+  searchCity(city);
+}
+let searchCityDisplay = document.querySelector("#search-form");
+searchCityDisplay.addEventListener("submit", handleSubmit);
