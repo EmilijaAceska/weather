@@ -52,7 +52,6 @@ ul {
 .section-city {
   padding: 15px;
   text-align: center;
-  border: 1px solid black;
 }
 
 .section-city li::first-letter{
@@ -61,7 +60,9 @@ ul {
 
 .my-city {
   display: inline-block;
-  font-size: 18px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 30px;
 }
 
 .display-degrees {
@@ -80,4 +81,5 @@ ul {
 
 .main-img {
   max-width: 220px;
+  margin-left: 50px;
 }
