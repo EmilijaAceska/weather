@@ -40,8 +40,9 @@ function displayWeather(response) {
   let displayDescription = document.querySelector("#description");
   displayDescription.innerHTML = response.data.weather[0].description;
 
-  let displayCelsius = document.querySelector("#deg-celsius");
-  displayCelsius.innerHTML = Math.round(response.data.main.temp);
+  let displayTemperature = document.querySelector("#degrees");
+  let displayCelsius=response.data.main.temp;
+  displayTemperature.innerHTML = Math.round(displayCelsius);
 
   let displayIcon = document.querySelector("#main-icon");
   displayIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
@@ -73,7 +74,7 @@ searchCityDisplay.addEventListener("submit", handleSubmit);
 
 function searchLocation(position){
   let apiKey = "93fe0a104f408de6497bde5628168f6f";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
 
@@ -86,3 +87,22 @@ let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Prilep");
+
+function changeFahrenheit(event){
+  event.preventDefault();
+  let temperatureElement=document.querySelector("#degrees");
+  let fahrenheitTemperature=(displayCelsius * 9) / 5 + 32;
+  temperatureElement.innerHTML=Math.round(fahrenheitTemperature);
+}
+let fahrenheit=document.querySelector("#deg-fahrenheit");
+fahrenheit.addEventListener("click", changeFahrenheit);
+
+function changeCelsius(event){
+  event.preventDefault();
+  let temperatureElement=document.querySelector("#degrees");
+  temperatureElement.innerHTML=Math.round(displayCelsius);
+}
+let celsius=document.querySelector("#deg-celsius");
+celsius.addEventListener("click", changeCelsius);
+
+let displayCelsius=null;
