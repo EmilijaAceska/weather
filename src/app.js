@@ -36,11 +36,16 @@ function displayWeather(response) {
   let displayCurrentDate = document.querySelector("#current-date");
   displayCurrentDate.innerHTML = formatDate(response.data.dt * 1000);
 
-  let displayCelsius = document.querySelector("#deg-celsius");
-  displayCelsius.innerHTML = Math.round(response.data.main.temp);
 
   let displayDescription = document.querySelector("#description");
   displayDescription.innerHTML = response.data.weather[0].description;
+
+  let displayCelsius = document.querySelector("#deg-celsius");
+  displayCelsius.innerHTML = Math.round(response.data.main.temp);
+
+  let displayIcon = document.querySelector("#main-icon");
+  displayIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  displayIcon.setAttribute("alt", response.data.weather[0].description);
 
   let displayHumidity = document.querySelector("#humidity");
   displayHumidity.innerHTML = response.data.main.humidity;

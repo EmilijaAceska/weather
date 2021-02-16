@@ -34,8 +34,8 @@ button:hover {
 ul {
   list-style-type: none;
   margin-left: -40px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .container {
@@ -73,6 +73,13 @@ ul {
 .weather-temperature {
   display: inline-block;
   margin: 0;
+  font-size: 25px;
+}
+
+.main-icons {
+  display: block;
+  margin: 0 auto;
+  max-width: 47px;
 }
 
 .my-ilustration {
@@ -81,5 +88,5 @@ ul {
 
 .main-img {
   max-width: 220px;
-  margin-left: 50px;
+  margin-left: 60px;
 }
