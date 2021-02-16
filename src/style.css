@@ -71,7 +71,7 @@ a:visited {
   display: inline-block;
   font-size: 20px;
   text-align: center;
-  margin-right: 30px;
+  margin-right: 5px;
 }
 
 .display-degrees {
@@ -102,5 +102,19 @@ a:visited {
 
 .main-img {
   max-width: 220px;
-  margin-left: 60px;
+  margin-left: 30px;
+}
+
+.section-forecast {
+  margin: 0 15px;
+}
+
+.next-hours {
+  display: inline-block;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 3px;
+  text-align: center;
+  padding: 2px;
+  margin: 1px;
 }
