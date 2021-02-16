@@ -9,18 +9,18 @@
 </head>
 
 <body>
-    <div>
+    <div class="container">
         <h1>
             Weather Application
         </h1>
         <div>
-            <form>
+            <form class="myForm">
                 <input type="search" placeholder="search for city.." autocomplete="off" autofocus="on" />
-                <input type="button" value="Search" />
+                <button>Search</button>
             </form>
         </div>
-        <div>
-            <div>
+        <div class="section-city">
+            <div class="my-city">
                 <h2>
                     City
                 </h2>
@@ -28,8 +28,10 @@
                     <li>Current date</li>
                     <li>Description</li>
                 </ul>
-                <div>
-                    <span>19 °C</span>
+                <div class="display-degrees">
+                    <strong class="weather-temperature">
+                        <span>19 °C</span>
+                    </strong>
                     <img src="icon" alt="icon">
                 </div>
                 <ul>
@@ -37,8 +39,8 @@
                     <li>Wind</li>
                 </ul>
             </div>
-            <div>
-                <img src="ilustration" alt="ilustration">
+            <div class="my-ilustration">
+                <img src="src/weather.png" alt="ilustration" class="main-img" />
             </div>
         </div>
     </div>

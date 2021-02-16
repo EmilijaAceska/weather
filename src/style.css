@@ -1,0 +1,83 @@
+h1 {
+  text-align: center;
+  color: rgba(137, 43, 226, 0.74);
+}
+
+h2 {
+  color: rgba(137, 43, 226, 0.74);
+  margin-bottom: 2px;
+}
+
+input {
+  width: 250px;
+  margin: auto;
+  height: 35px;
+}
+
+button {
+  border: 1px solid rgb(167, 137, 196);
+  border-radius: 25px;
+  background-color: rgba(137, 43, 226, 0.74);
+  color: white;
+  font-size: 16px;
+  margin-left: 8px;
+  line-height: 18px;
+  padding: 10px 20px;
+  transition: all 200ms ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(151, 101, 197);
+}
+
+ul {
+  list-style-type: none;
+  margin-left: -40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container {
+  border: 1px solid black;
+  border-radius: 3px;
+  max-width: 700px;
+  margin: 20px auto 0;
+  padding: 10px;
+}
+
+.myForm {
+  text-align: center;
+}
+.section-city {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.section-city li::first-letter{
+  text-transform: capitalize;
+}
+
+.my-city {
+  display: inline-block;
+  font-size: 18px;
+}
+
+.display-degrees {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.weather-temperature {
+  display: inline-block;
+  margin: 0;
+}
+
+.my-ilustration {
+  display: inline-block;
+}
+
+.main-img {
+  max-width: 220px;
+}
