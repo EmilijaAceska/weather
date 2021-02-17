@@ -41,6 +41,7 @@ ul {
 a {
   cursor: pointer;
   text-decoration: none;
+  color: blueviolet;
 }
 
 a:visited {
@@ -82,14 +83,22 @@ a:visited {
 .weather-temperature {
   display: inline-block;
   margin: 0;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .celsius-fahrenheit {
   font-size: 15px;
-  margin-top: -10px;
+  margin-left: 3px;
 }
 
+.celsius-fahrenheit .active {
+  color: black;
+  cursor: default;
+}
+
+.celsius-fahrenheit .active:hover {
+  text-decoration: none;
+}
 .main-icons {
   display: block;
   margin: 0 auto;

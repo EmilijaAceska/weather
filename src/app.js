@@ -117,6 +117,8 @@ searchCity("Prilep");
 
 function changeFahrenheit(event){
   event.preventDefault();
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
   let temperatureElement=document.querySelector("#degrees");
   let fahrenheitTemperature=(displayCelsius * 9) / 5 + 32;
   temperatureElement.innerHTML=Math.round(fahrenheitTemperature);
@@ -126,6 +128,8 @@ fahrenheit.addEventListener("click", changeFahrenheit);
 
 function changeCelsius(event){
   event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
   let temperatureElement=document.querySelector("#degrees");
   temperatureElement.innerHTML=Math.round(displayCelsius);
 }
